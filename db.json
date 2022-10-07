@@ -3,30 +3,26 @@
     {
       "id": "1",
       "date": "17.09.2022",
-      "hastaId": "1"
+      "hastaId": "1665173327651"
     }
   ],
   "hastalar": [
     {
-      "id": "1",
-      "name": "deneme",
-      "surname": "deneme",
-      "phone": "5555555555",
-      "islemIds": ["1", "2"]
+      "id": "1665173327651",
+      "name": "ekleme1",
+      "surname": "ekleme1",
+      "phone": "05555555550",
+      "islemIds": [
+        "1665173327644"
+      ]
     }
   ],
   "islemler": [
     {
-      "id": "1",
+      "id": "1665173327644",
       "sikayet": "grip",
-      "uygulananTedavi": "2 gün istirahat tavsiye edildi",
-      "yazilanIlaclar": ["parol", "katarin", "agumentine"]
-    },
-    {
-      "id": "2",
-      "sikayet": "bel ağrısı",
-      "uygulananTedavi": "ayakta",
-      "yazilanIlaclar": ["parol", "voltaren"]
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
     }
   ]
 }
