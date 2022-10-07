@@ -37,7 +37,7 @@ const Home = () => {
       <Header />
       <TableContainer style={{ marginTop: "50px" }} component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead sx={{ backgroundColor: "#aaa" }}>
+          <TableHead sx={{ backgroundColor: "#999" }}>
             <TableRow>
               <TableCell>Tarih</TableCell>
               <TableCell>Adı</TableCell>
