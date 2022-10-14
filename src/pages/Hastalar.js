@@ -18,6 +18,8 @@ const Hastalar = (props) => {
   const navigate = useNavigate();
   const [hastalar, setHastalar] = useState(null);
   const [updateComponent,setUpdateComponent]=useState(false)
+  const [randevular,setRandevular]=useState(null)
+
   useEffect(() => {
     axios
       .get("http://localhost:3004/hastalar")
@@ -25,11 +27,18 @@ const Hastalar = (props) => {
         setHastalar(res.data);
       })
       .catch((err) => console.log("Hastalar page getHastalarErr", err));
+    axios.get("http://localhost:3004/randevular")
+    .then(res=>{
+      setRandevular(res.data)
+    })
+    .catch(err=>console.log(err))
   }, [updateComponent]);
 
 
   const handleDeleteHasta=(hasta)=>{
     console.log(hasta)
+    const filteredRandevular=randevular.filter(item => item.hastaId === hasta.id)
+    console.log("filtrelenmiş randevular",filteredRandevular)
     axios.delete(`http://localhost:3004/hastalar/${hasta.id}`)
     .then(deleteHastaRes=>{
       hasta.islemIds.map(islemId=>{
@@ -39,12 +48,17 @@ const Hastalar = (props) => {
         })
         .catch(err=>console.log("hastalar sayfası deleteIslem err",err))
       })
+      filteredRandevular.map(item=>{
+        axios.delete(`http://localhost:3004/randevular/${item.id}`)
+        .then(res=>{})
+        .catch(err=>console.log(err))
+      })
       setUpdateComponent(!updateComponent)
     })
     .catch(err=>console.log("hasatalar sayfası hastaDelete err",err))
   }
 
-  if (hastalar === null) {
+  if (hastalar === null || randevular === null) {
     return <h1>Loading...</h1>;
   }
 

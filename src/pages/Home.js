@@ -7,9 +7,12 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import Button from "@mui/material/Button";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate=useNavigate()
   const [randevular, setRandevular] = useState(null);
   const [hastalar, setHastalar] = useState(null);
 
@@ -36,6 +39,16 @@ const Home = () => {
     <div>
       <Header />
       <TableContainer style={{ marginTop: "50px" }} component={Paper}>
+      <div
+          style={{
+            marginBottom: "20px",
+            display: "flex",
+            justifyContent: "flex-end",
+          }}>
+          <Button onClick={()=>navigate("/randevu-ekle")} variant="contained">
+            Randevu Ekle
+          </Button>
+        </div>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead sx={{ backgroundColor: "#999" }}>
             <TableRow>
