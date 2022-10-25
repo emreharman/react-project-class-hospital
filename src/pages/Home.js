@@ -72,7 +72,7 @@ const Home = () => {
                   }}
                 >
                   <TableCell component="th" scope="row">
-                    {randevu.date}
+                    {new Date(randevu.date).toLocaleString()}
                   </TableCell>
                   <TableCell>{aradigimHasta.name}</TableCell>
                   <TableCell>{aradigimHasta.surname}</TableCell>
