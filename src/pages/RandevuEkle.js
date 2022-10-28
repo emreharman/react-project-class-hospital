@@ -16,6 +16,7 @@ const RandevuEkle = (props) => {
   const [sikayet, setSikayet] = useState("");
   const [hastalar, setHastalar] = useState(null);
   const [hasHasta, setHasHasta] = useState(false);
+  const [randevular,setRandevular]=useState(null)
 
   useEffect(() => {
     axios
@@ -24,6 +25,9 @@ const RandevuEkle = (props) => {
         setHastalar(res.data);
       })
       .catch((err) => console.log(err));
+    axios.get("http://localhost:3004/randevular")
+    .then(res=>setRandevular(res.data))
+    .catch((err) => console.log(err))
   }, []);
 
   const handleSubmit = (event) => {
@@ -43,6 +47,15 @@ const RandevuEkle = (props) => {
       alert("Telefon numarası 11 hane olmak zorundadır");
       return;
     }
+    const isAvailableDate=randevular.find(item=>item.date === date)
+    console.log(isAvailableDate)
+
+    if(isAvailableDate !== undefined){
+      alert("Bu randevu günü ve saati doludur");
+      return
+    }
+
+    
     if (hasHasta) {
       const newRandevu = {
         id: String(new Date().getTime()),
@@ -136,7 +149,7 @@ const RandevuEkle = (props) => {
     }
   };
 
-  if (hastalar === null) {
+  if (hastalar === null || randevular === null) {
     return <h1>Loading...</h1>;
   }
   return (

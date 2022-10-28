@@ -14,6 +14,11 @@
       "id": "1666721815318",
       "date": "2022-10-26T21:16",
       "hastaId": "1666721815317"
+    },
+    {
+      "id": "1666987206036",
+      "date": "2022-10-31T16:59",
+      "hastaId": "1666986974707"
     }
   ],
   "hastalar": [
@@ -35,24 +40,56 @@
         "1666721815316"
       ],
       "phone": "05555555551"
+    },
+    {
+      "id": "1666986974707",
+      "name": "ahmet",
+      "surname": "mehmet",
+      "phone": "05555555553",
+      "islemIds": [
+        "1666986974698",
+        "1666987206037"
+      ]
     }
   ],
   "islemler": [
     {
       "id": "1666721564050",
       "sikayet": "deneme1",
-      "uygulananTedavi": "",
-      "yazilanIlaclar": []
+      "uygulananTedavi": "genel muayene",
+      "yazilanIlaclar": [
+        "parol",
+        "aspirin",
+        "burun spreyi"
+      ]
     },
     {
       "id": "1666721787409",
       "sikayet": "baş ağrısı",
-      "uygulananTedavi": "",
-      "yazilanIlaclar": []
+      "uygulananTedavi": "deneme tedavisi",
+      "yazilanIlaclar": [
+        "parol",
+        "aspirin"
+      ]
     },
     {
       "id": "1666721815316",
       "sikayet": "bel ağrısı",
+      "uygulananTedavi": "genel muayene",
+      "yazilanIlaclar": [
+        "aspirin",
+        "burun spreyi"
+      ]
+    },
+    {
+      "id": "1666986974698",
+      "sikayet": "tırnak batması",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1666987206037",
+      "sikayet": "deneme",
       "uygulananTedavi": "",
       "yazilanIlaclar": []
     }
