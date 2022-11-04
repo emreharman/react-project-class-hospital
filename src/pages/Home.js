@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "../components/Header";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -8,30 +8,18 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Home = () => {
-  const navigate=useNavigate()
-  const [randevular, setRandevular] = useState(null);
-  const [hastalar, setHastalar] = useState(null);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:3004/randevular")
-      .then((resRandevular) => {
-        setRandevular(resRandevular.data);
-        axios
-          .get("http://localhost:3004/hastalar")
-          .then((resHastalar) => {
-            setHastalar(resHastalar.data);
-          })
-          .catch((err) => console.log("hastalar hata", err));
-      })
-      .catch((err) => console.log("randevular hata", err));
-  }, []);
-
-  if (randevular === null || hastalar === null) {
+  const { randevularState, hastalarState } = useSelector((state) => state);
+  const navigate = useNavigate();
+  if (
+    hastalarState.start === true ||
+    hastalarState.fail === true ||
+    randevularState.start === true ||
+    randevularState.fail === true
+  ) {
     return <h1>Loading...</h1>;
   }
 
@@ -39,13 +27,13 @@ const Home = () => {
     <div>
       <Header />
       <TableContainer style={{ marginTop: "50px" }} component={Paper}>
-      <div
+        <div
           style={{
             marginBottom: "20px",
             display: "flex",
             justifyContent: "flex-end",
           }}>
-          <Button onClick={()=>navigate("/randevu-ekle")} variant="contained">
+          <Button onClick={() => navigate("/randevu-ekle")} variant="contained">
             Randevu Ekle
           </Button>
         </div>
@@ -60,8 +48,8 @@ const Home = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {randevular.map((randevu) => {
-              const aradigimHasta = hastalar.find(
+            {randevularState.randevular.map((randevu) => {
+              const aradigimHasta = hastalarState.hastalar.find(
                 (hasta) => hasta.id === randevu.hastaId
               );
               return (
@@ -69,8 +57,7 @@ const Home = () => {
                   key={randevu.id}
                   sx={{
                     "&:last-child td, &:last-child th": { border: 0 },
-                  }}
-                >
+                  }}>
                   <TableCell component="th" scope="row">
                     {new Date(randevu.date).toLocaleString()}
                   </TableCell>
