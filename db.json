@@ -1,95 +1,65 @@
 {
   "randevular": [
     {
-      "id": "1666721564052",
-      "date": "2022-10-26T21:12",
-      "hastaId": "1666721564051"
+      "id": "1668197093772",
+      "date": "2022-11-14T23:04",
+      "hastaId": "1668196517852"
     },
     {
-      "id": "1666721787408",
-      "date": "2022-10-27T21:16",
-      "hastaId": "1666721564051"
+      "id": "1668197115434",
+      "date": "2022-11-15T23:04",
+      "hastaId": "1668197115433"
     },
     {
-      "id": "1666721815318",
-      "date": "2022-10-26T21:16",
-      "hastaId": "1666721815317"
-    },
-    {
-      "id": "1666987206036",
-      "date": "2022-10-31T16:59",
-      "hastaId": "1666986974707"
+      "id": "1668197151260",
+      "date": "2022-11-12T23:05",
+      "hastaId": "1668196517852"
     }
   ],
   "hastalar": [
     {
-      "id": "1666721564051",
-      "name": "deneme1update",
-      "surname": "deneme1update",
+      "id": "1668196517852",
+      "name": "deneme11",
+      "surname": "deneme11",
+      "phone": "05555555551",
       "islemIds": [
-        "1666721564050",
-        "1666721787409"
-      ],
-      "phone": "05555555550"
+        "1668196517843",
+        "1668197093773",
+        "1668197151261"
+      ]
     },
     {
-      "id": "1666721815317",
+      "id": "1668197115433",
       "name": "deneme2",
       "surname": "deneme2",
       "islemIds": [
-        "1666721815316"
+        "1668197115432"
       ],
-      "phone": "05555555551"
-    },
-    {
-      "id": "1666986974707",
-      "name": "ahmet",
-      "surname": "mehmet",
-      "phone": "05555555553",
-      "islemIds": [
-        "1666986974698",
-        "1666987206037"
-      ]
+      "phone": "05555555552"
     }
   ],
   "islemler": [
     {
-      "id": "1666721564050",
+      "id": "1668196517843",
       "sikayet": "deneme1",
-      "uygulananTedavi": "genel muayene",
-      "yazilanIlaclar": [
-        "parol",
-        "aspirin",
-        "burun spreyi"
-      ]
-    },
-    {
-      "id": "1666721787409",
-      "sikayet": "baş ağrısı",
-      "uygulananTedavi": "deneme tedavisi",
-      "yazilanIlaclar": [
-        "parol",
-        "aspirin"
-      ]
-    },
-    {
-      "id": "1666721815316",
-      "sikayet": "bel ağrısı",
-      "uygulananTedavi": "genel muayene",
-      "yazilanIlaclar": [
-        "aspirin",
-        "burun spreyi"
-      ]
-    },
-    {
-      "id": "1666986974698",
-      "sikayet": "tırnak batması",
       "uygulananTedavi": "",
       "yazilanIlaclar": []
     },
     {
-      "id": "1666987206037",
-      "sikayet": "deneme",
+      "id": "1668197093773",
+      "sikayet": "deneme1",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668197115432",
+      "sikayet": "deneme2",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668197151261",
+      "sikayet": "deneme1",
       "uygulananTedavi": "",
       "yazilanIlaclar": []
     }

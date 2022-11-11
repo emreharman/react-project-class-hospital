@@ -36,7 +36,18 @@ const islemlerReducer=(state=initialState,action)=>{
                 success:false,
                 fail:true,
                 error:action.payload
-            }    
+            }  
+        case actionTypes.ADD_ISLEM:
+            return{
+                ...state,
+                islemler: [action.payload,...state.islemler]
+            }  
+        case actionTypes.DELETE_ISLEM:
+            const filteredIslemlerDelete=state.islemler.filter(item=>item.id !== action.payload)
+            return{
+                ...state,
+                islemler:filteredIslemlerDelete
+            }
         default:
             return state
     }

@@ -36,7 +36,18 @@ const randevularReducer=(state=initialState,action)=>{
                 success:false,
                 fail:true,
                 error:action.payload
-            }    
+            }  
+        case actionTypes.ADD_RANDEVU:
+            return{
+                ...state,
+                randevular:[action.payload,...state.randevular]
+            }  
+        case actionTypes.DELETE_RANDEVU:
+            const filteredRandevular=state.randevular.filter(item=>item.id !== action.payload)
+            return{
+                ...state,
+                randevular:filteredRandevular
+            }
         default:
             return state
     }

@@ -13,6 +13,13 @@ import { useSelector } from "react-redux";
 
 const Home = () => {
   const { randevularState, hastalarState } = useSelector((state) => state);
+  
+  const sortedRandevular=randevularState.randevular.sort(function(item1,item2){
+    // Turn your strings into dates, and then subtract them
+    // to get a value that is either negative, positive, or zero.
+    return new Date(item2.date) - new Date(item1.date);
+  });
+  
   const navigate = useNavigate();
   if (
     hastalarState.start === true ||
@@ -48,7 +55,14 @@ const Home = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {randevularState.randevular.map((randevu) => {
+          {randevularState.randevular.length === 0 && (
+              <TableRow>
+                <TableCell align="center" colSpan={4}>
+                  Kayıtlı Hasta Bulunmamaktadır
+                </TableCell>
+              </TableRow>
+            )}
+            {sortedRandevular.map((randevu) => {
               const aradigimHasta = hastalarState.hastalar.find(
                 (hasta) => hasta.id === randevu.hastaId
               );

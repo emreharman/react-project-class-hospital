@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Button, TextField, Modal, Box } from "@mui/material";
 
+import { useSelector,useDispatch } from "react-redux";
+import actionTypes from "../redux/actions/actionTypes";
+
 import axios from "axios";
 
 const style = {
@@ -18,11 +21,10 @@ const EditHastaModal = (props) => {
   const {
     open,
     handleClose,
-    hasta,
-    hastalar,
-    updateComponent,
-    setUpdateComponent,
+    hasta
   } = props;
+  const {hastalarState}=useSelector(state=>state)
+  const dispatch=useDispatch()
   const [name, setName] = useState(hasta?.name);
   const [hasNameError, setHasNameError] = useState(false);
   const [surname, setSurname] = useState(hasta?.surname);
@@ -71,7 +73,7 @@ const EditHastaModal = (props) => {
         }, 3000);
       return;
     }
-    const filteredHastalar = hastalar.filter(
+    const filteredHastalar = hastalarState.hastalar.filter(
       (item) => item.phone !== hasta.phone
     );
     const hasNumber = filteredHastalar.find((hasta) => hasta.phone === phone);
@@ -90,7 +92,7 @@ const EditHastaModal = (props) => {
       .put(`http://localhost:3004/hastalar/${hasta.id}`, updatedHasta)
       .then((response) => {
         handleClose();
-        setUpdateComponent(!updateComponent);
+        dispatch({type:actionTypes.EDIT_HASTA,payload:updatedHasta})
       })
       .catch((err) => console.log(err));
   };
