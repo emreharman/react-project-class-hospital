@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
+import {useSelector} from 'react-redux'
 
 import Header from "../components/Header";
 import TedaviUygulaModal from "../components/TedaviUygulaModal";
@@ -9,11 +10,11 @@ import axios from "axios";
 
 const HastaDetay = (props) => {
   const { hastaId } = useParams();
+  const {islemlerState} = useSelector(state=>state)
   const [hasta, setHasta] = useState(null);
   const [hastaIslemleri, setHastaIslemleri] = useState([]);
   const [openTedaviModal, setOpenTedaviModal] = useState(false);
   const [secilenIslem,setSecilenIslem]=useState(null)
-  const [didUpdate,setDidUpdate]=useState(false)
 
   useEffect(() => {
     axios
@@ -38,7 +39,7 @@ const HastaDetay = (props) => {
           .catch((err) => console.log(err));
       })
       .catch((err) => console.log(err));
-  }, [didUpdate]);
+  }, [islemlerState.islemler]);
 
   return (
     <div>
@@ -87,8 +88,6 @@ const HastaDetay = (props) => {
         open={openTedaviModal}
         handleClose={() => setOpenTedaviModal(false)}
         islem={secilenIslem}
-        didUpdate={didUpdate}
-        setDidUpdate={setDidUpdate}
       />
     </div>
   );

@@ -14,6 +14,56 @@
       "id": "1668197151260",
       "date": "2022-11-12T23:05",
       "hastaId": "1668196517852"
+    },
+    {
+      "id": "1668798485711",
+      "date": "2022-11-19T22:07",
+      "hastaId": "1668196517852"
+    },
+    {
+      "id": "1668798521228",
+      "date": "2022-11-18T23:08",
+      "hastaId": "1668196517852"
+    },
+    {
+      "id": "1668798548276",
+      "date": "2022-11-11T22:08",
+      "hastaId": "1668196517852"
+    },
+    {
+      "id": "1668799344165",
+      "date": "2022-11-18T22:26",
+      "hastaId": "1668196517852"
+    },
+    {
+      "id": "1668800176138",
+      "date": "2022-11-18T22:42",
+      "hastaId": "1668196517852"
+    },
+    {
+      "id": "1668800623744",
+      "date": "2022-11-18T22:49",
+      "hastaId": "1668196517852"
+    },
+    {
+      "id": "1668800775997",
+      "date": "2022-11-18T22:52",
+      "hastaId": "1668196517852"
+    },
+    {
+      "id": "1668800992187",
+      "date": "2022-11-18T22:56",
+      "hastaId": "1668196517852"
+    },
+    {
+      "id": "1668801511490",
+      "date": "2022-11-18T22:04",
+      "hastaId": "1668196517852"
+    },
+    {
+      "id": "1668801543713",
+      "date": "2022-11-18T23:05",
+      "hastaId": "1668196517852"
     }
   ],
   "hastalar": [
@@ -25,7 +75,17 @@
       "islemIds": [
         "1668196517843",
         "1668197093773",
-        "1668197151261"
+        "1668197151261",
+        "1668798485713",
+        "1668798521229",
+        "1668798548277",
+        "1668799344166",
+        "1668800176139",
+        "1668800623745",
+        "1668800775998",
+        "1668800992188",
+        "1668801511491",
+        "1668801543714"
       ]
     },
     {
@@ -42,8 +102,11 @@
     {
       "id": "1668196517843",
       "sikayet": "deneme1",
-      "uygulananTedavi": "",
-      "yazilanIlaclar": []
+      "uygulananTedavi": "ilaç yazıldı",
+      "yazilanIlaclar": [
+        "aspirin",
+        "parol"
+      ]
     },
     {
       "id": "1668197093773",
@@ -60,6 +123,66 @@
     {
       "id": "1668197151261",
       "sikayet": "deneme1",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668798485713",
+      "sikayet": "deneme",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668798521229",
+      "sikayet": "deneme",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668798548277",
+      "sikayet": "deneme",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668799344166",
+      "sikayet": "deneme",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668800176139",
+      "sikayet": "deneme",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668800623745",
+      "sikayet": "deneme",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668800775998",
+      "sikayet": "deneme",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668800992188",
+      "sikayet": "deneme",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668801511491",
+      "sikayet": "deneme",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1668801543714",
+      "sikayet": "deneme",
       "uygulananTedavi": "",
       "yazilanIlaclar": []
     }

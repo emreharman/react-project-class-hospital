@@ -3,6 +3,9 @@ import { Button, TextField, Modal, Box } from "@mui/material";
 
 import axios from "axios";
 
+import {useDispatch} from 'react-redux'
+import actionTypes from "../redux/actions/actionTypes";
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -15,7 +18,8 @@ const style = {
 };
 
 const TedaviUygulaModal = (props) => {
-  const { open, handleClose,islem,didUpdate,setDidUpdate } = props;
+  const { open, handleClose,islem } = props;
+  const dispatch=useDispatch()
   const [uygulananTedavi,setUygulananTedavi]=useState("")
   const [ilaclar,setIlaclar]=useState("")
 
@@ -39,7 +43,7 @@ const TedaviUygulaModal = (props) => {
         setUygulananTedavi("")
         setIlaclar("")
         handleClose()
-        setDidUpdate(!didUpdate)
+        dispatch({type:actionTypes.EDIT_ISLEM,payload:updatedIslem})
     })
     .catch(err=>console.log(err))
   };
