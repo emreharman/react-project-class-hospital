@@ -24,6 +24,9 @@ const Header = (props) => {
               gap: "20px",
             }}
           >
+            <Link className="menuLink" to="/resim-yukle">
+              Resim Yükle
+            </Link>
             <Link className="menuLink" to="/">
               Anasayfa
             </Link>

@@ -5,6 +5,8 @@ import Hastalar from "./pages/Hastalar";
 import HastaEkle from "./pages/HastaEkle";
 import RandevuEkle from "./pages/RandevuEkle";
 import HastaDetay from "./pages/HastaDetay";
+import RandevuDetay from "./pages/RandevuDetay";
+import ResimDeneme from "./pages/ResimDeneme";
 
 import api from "./api/api";
 import urls from "./api/urls";
@@ -45,6 +47,8 @@ function App() {
         <Route path="/hasta-ekle" element={<HastaEkle />} />
         <Route path="/randevu-ekle"  element={<RandevuEkle />}/>
         <Route path="/hasta-detay/:hastaId" element={<HastaDetay />}/>
+        <Route path="/randevu-detay/:randevuId" element={<RandevuDetay />} />
+        <Route path="/resim-yukle" element={<ResimDeneme />}/>
       </Routes>
     </BrowserRouter>
   );

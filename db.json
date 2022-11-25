@@ -64,6 +64,21 @@
       "id": "1668801543713",
       "date": "2022-11-18T23:05",
       "hastaId": "1668196517852"
+    },
+    {
+      "id": "1669400293939",
+      "date": "2022-11-26T10:00",
+      "hastaId": "1669399555819"
+    },
+    {
+      "id": "1669400323637",
+      "date": "2022-11-28T21:18",
+      "hastaId": "1669400323636"
+    },
+    {
+      "id": "1669400896894",
+      "date": "2022-11-27T06:27",
+      "hastaId": "1669400896893"
     }
   ],
   "hastalar": [
@@ -96,6 +111,34 @@
         "1668197115432"
       ],
       "phone": "05555555552"
+    },
+    {
+      "id": "1669399555819",
+      "name": "Emre",
+      "surname": "Harman",
+      "islemIds": [
+        "1669399555818",
+        "1669400293940"
+      ],
+      "phone": "05555555555"
+    },
+    {
+      "id": "1669400323636",
+      "name": "Ahmet",
+      "surname": "Kılıç",
+      "islemIds": [
+        "1669400323635"
+      ],
+      "phone": "05555555554"
+    },
+    {
+      "id": "1669400896893",
+      "name": "Mehmet",
+      "surname": "Yılmaz",
+      "islemIds": [
+        "1669400896892"
+      ],
+      "phone": "05555555553"
     }
   ],
   "islemler": [
@@ -183,6 +226,30 @@
     {
       "id": "1668801543714",
       "sikayet": "deneme",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1669399555818",
+      "sikayet": "Baş Ağrısı",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1669400293940",
+      "sikayet": "baş ağrısı",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1669400323635",
+      "sikayet": "Boğaz Ağrısı",
+      "uygulananTedavi": "",
+      "yazilanIlaclar": []
+    },
+    {
+      "id": "1669400896892",
+      "sikayet": "Ateş",
       "uygulananTedavi": "",
       "yazilanIlaclar": []
     }
