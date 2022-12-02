@@ -7,6 +7,7 @@ import RandevuEkle from "./pages/RandevuEkle";
 import HastaDetay from "./pages/HastaDetay";
 import RandevuDetay from "./pages/RandevuDetay";
 import ResimDeneme from "./pages/ResimDeneme";
+import RandevuDuzenle from "./pages/RandevuDuzenle";
 
 import api from "./api/api";
 import urls from "./api/urls";
@@ -49,6 +50,7 @@ function App() {
         <Route path="/hasta-detay/:hastaId" element={<HastaDetay />}/>
         <Route path="/randevu-detay/:randevuId" element={<RandevuDetay />} />
         <Route path="/resim-yukle" element={<ResimDeneme />}/>
+        <Route path="/randevu-duzenle/:randevuId" element={<RandevuDuzenle />} />
       </Routes>
     </BrowserRouter>
   );

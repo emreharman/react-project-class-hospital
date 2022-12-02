@@ -139,7 +139,7 @@ const Home = () => {
                   <TableCell>{aradigimHasta.phone}</TableCell>
                   <TableCell>
                     <Stack spacing={2} direction="row">
-                      <Button variant="outlined" color="primary">
+                      <Button onClick={()=>navigate(`/randevu-duzenle/${randevu.id}`)} variant="outlined" color="primary">
                         Düzenle
                       </Button>
                       <Button
